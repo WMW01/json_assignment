@@ -7,7 +7,18 @@
     <h1>Problem2</h1>
     <div id="output"></div>
     <script>
-        
+        function displaySong (song){
+            document.getElementById("output").innerHTML += 
+            "<h2>" + song.title + "</h2>" + 
+            "<p>" + "Artist: " + song.artist + "</p>" + 
+            "<p>" + "Genre: " + song.genre.join(",") + "</p>"
+            "<P>" + "Released: " + song.year + "</p>"
+        }
+        $.get ("https://raw.githubusercontent.com/WMW01/json_assignment/refs/heads/main/songs.json", 
+            function( data ){
+                data.forEach(displaySong)
+            }
+        ) 
     </script>
 </body>
 </html>
