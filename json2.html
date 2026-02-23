@@ -11,12 +11,14 @@
             document.getElementById("output").innerHTML += 
             "<h2>" + song.title + "</h2>" + 
             "<p>" + "Artist: " + song.artist + "</p>" + 
-            "<p>" + "Genre: " + song.genre.join(",") + "</p>"
-            "<P>" + "Released: " + song.year + "</p>"
+            "<p>" + "Genre: " + song.genre.join(",") + "</p>"+ 
+            "<P>" + "Released: " + song.year + "</p>" +
+            "</br>"
         }
         $.get ("https://raw.githubusercontent.com/WMW01/json_assignment/refs/heads/main/songs.json", 
             function( data ){
-                data.forEach(displaySong)
+                parsed_data = JSON.parse(data)
+                parsed_data.forEach(displaySong)
             }
         ) 
     </script>
