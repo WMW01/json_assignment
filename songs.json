@@ -1,0 +1,10 @@
+[
+    {"title": "Smells Like Teen Spirit", "Artist": "Nirvana", "Year": 1975, "genre": ["Rock"]},
+    {"title": "Hey Ya!", "Artist": "Outkast", "Year": 2003, "genre": ["Pop", "R&B"]},
+    {"title": "I Will Always Love You", "Artist": "Whitney Houston", "Year": 1992, "genre": ["Pop", "R&B"]},
+    {"title": "Jolene", "Artist": "Dolly Parton", "Year": 1973, "genre": ["Country"]},
+    {"title": "Mr.Brightside", "Artist": "The Killers", "Year": 2004, "genre": ["Rock"]},
+    {"title": "Sandstorm", "Artist": "Darude", "Year": 1999, "genre": ["Electric"]},
+    {"title": "Uptown Funk", "Artist": "Mark Ronson ft.Bruno Mars", "Year": 2014, "genre": ["Pop", "R&B"]},
+    {"title": "Ring of Fire", "Artist": "Johnny Cash", "Year": 1963, "genre":["Country"]}
+]
