@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+        <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+        <title>Problem 3</title>
+
+    </head>
+    <body>
+        <h1>Problem 3</h1>
+        <select id = "selector"></select></br>
+        <button type = "button", id = "filter">Filter</button></br>
+        <div id="output"></div>
+        <script>
+        $.get ("https://raw.githubusercontent.com/WMW01/json_assignment/refs/heads/main/songs.json", 
+            function (data) {
+                parsed_data = JSON.parse(data)
+                var all_genres = []
+                parsed_data.forEach(function(song){
+                    song.genre.forEach(function(g){
+                        all_genres.push(g)
+                    })
+                })
+
+                var uniqueGenres = new Set(all_genres)
+                var genre_array = [...uniqueGenres]
+                genre_array.forEach(function(genre){
+                    document.getElementById("selector").innerHTML +=
+                    "<option>" +  genre + "</option>"
+                })
+
+                document.getElementById("filter").onclick = function(){
+                    var selected =document.getElementById("selector").value 
+                    document.getElementById("output").innerHTML = ""
+
+                    parsed_data.forEach(function(song){
+                        if(song.genre.includes(selected)){
+                            document.getElementById("output").innerHTML += "<p>" + song.title + "</p>"
+                        }
+                    })
+                }
+            }
+        )
+        </script>
+    </body>
+
+</html>
